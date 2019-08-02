@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+import getName from '..';
 import ask from '../lib/ask';
 import Validator from '../lib/validator';
 import Message from '../lib/message';
@@ -28,4 +31,8 @@ class BrainEven {
   }
 }
 
-export default BrainEven;
+console.log('Welcome to the Brain Games!');
+console.log("Answer 'yes' if number even otherwise answer 'no'. \n");
+
+const name = getName();
+new BrainEven(name).run();
