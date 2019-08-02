@@ -1,5 +1,5 @@
-import Message from './message';
 import readlineSync from 'readline-sync';
+import Message from './message';
 import getName from '..';
 
 class Game {

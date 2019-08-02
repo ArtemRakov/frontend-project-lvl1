@@ -1,12 +1,13 @@
 #!/usr/bin/env node
+/* eslint no-eval: 0 */
 
-import Game from '../lib/game';
 import _ from 'lodash';
+import Game from '../lib/game';
 
 class BrainCal extends Game {
   constructor(name) {
     super(name);
-    this.validation = (result) => String(eval(result));
+    this.validation = result => String(eval(result));
     this.question = () => {
       const number1 = Math.floor(Math.random() * 25);
       const number2 = Math.floor(Math.random() * 25);
@@ -15,9 +16,9 @@ class BrainCal extends Game {
       console.log(question);
       return question;
     };
-    this.instuction = () => console.log("What is the result of the expression? \n");
+    this.instuction = () => console.log('What is the result of the expression? \n');
   }
 }
 
 
-BrainCal.run()
+BrainCal.run();

@@ -5,7 +5,7 @@ import Game from '../lib/game';
 class BrainEven extends Game {
   constructor(name) {
     super(name);
-    this.validation = (number) => number % 2 === 0 ? 'yes' : 'no';  
+    this.validation = number => (number % 2 === 0 ? 'yes' : 'no');
     this.question = () => {
       const number = Math.floor(Math.random() * 100);
       console.log(`Question: ${number}`);
@@ -16,4 +16,4 @@ class BrainEven extends Game {
 }
 
 
-BrainEven.run()
+BrainEven.run();
