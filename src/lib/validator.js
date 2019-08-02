@@ -1,7 +1,6 @@
 class Validator {
   static valid(number, answer) {
-    const even = this.correctAnswer(number);
-    return even === answer.toLowerCase();
+    return this.correctAnswer(number) === answer.toLowerCase();
   }
 
 
