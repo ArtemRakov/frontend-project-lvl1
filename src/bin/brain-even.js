@@ -1,38 +1,19 @@
 #!/usr/bin/env node
 
-import getName from '..';
-import ask from '../lib/ask';
-import Validator from '../lib/validator';
-import Message from '../lib/message';
+import Game from '../lib/game';
 
-class BrainEven {
+class BrainEven extends Game {
   constructor(name) {
-    this.name = name;
-    this.validator = Validator;
-    this.message = Message;
-  }
-
-  run() {
-    let correct = 0;
-
-    while (correct < 3) {
-      const { number, answer } = ask();
-
-      if (this.validator.valid(number, answer)) {
-        correct += 1;
-        this.message.success();
-      } else {
-        this.message.fail(answer, this.validator.correctAnswer(number), this.name);
-        return;
-      }
-    }
-
-    this.message.final(this.name);
+    super(name);
+    this.validation = (number) => number % 2 === 0 ? 'yes' : 'no';  
+    this.question = () => {
+      const number = Math.floor(Math.random() * 100);
+      console.log(`Question: ${number}`);
+      return number;
+    };
+    this.instuction = () => console.log("Answer 'yes' if number even otherwise answer 'no'. \n");
   }
 }
 
-console.log('Welcome to the Brain Games!');
-console.log("Answer 'yes' if number even otherwise answer 'no'. \n");
 
-const name = getName();
-new BrainEven(name).run();
+BrainEven.run()
