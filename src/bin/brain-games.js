@@ -1,7 +1,11 @@
 #!/usr/bin/env node
 
-import startGame from '..';
+import getName from '..';
+import BranEven from './brain-even';
 
 console.log('Welcome to the Brain Games!');
+console.log("Answer 'yes' if number even otherwise answer 'no'. \n");
 
-startGame();
+const name = getName();
+const game = new BranEven(name);
+game.run();
