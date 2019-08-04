@@ -6,3 +6,6 @@ Brain Even
 
 Brain Calculator
 [![asciicast](https://asciinema.org/a/H0ExNdZXb0tYxl2lSeX7gaBo0.svg)](https://asciinema.org/a/H0ExNdZXb0tYxl2lSeX7gaBo0)
+
+Brain GCD
+[![asciicast](https://asciinema.org/a/9UmVc4qbKK2bBoLdL08V7bYzh.svg)](https://asciinema.org/a/9UmVc4qbKK2bBoLdL08V7bYzh)
