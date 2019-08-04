@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
 import Game from '../lib/game';
+import validation from '../games/brain-even/validation';
+import question from '../games/brain-even/question';
+import instruction from '../games/brain-even/instruction';
+
 
 class BrainEven extends Game {
   constructor(name) {
     super(name);
-    this.validation = number => (number % 2 === 0 ? 'yes' : 'no');
-    this.question = () => {
-      const number = Math.floor(Math.random() * 100);
-      console.log(`Question: ${number}`);
-      return number;
-    };
-    this.instuction = () => console.log("Answer 'yes' if number even otherwise answer 'no'. \n");
+    this.validation = validation;
+    this.question = question;
+    this.instruction = instruction;
   }
 }
 

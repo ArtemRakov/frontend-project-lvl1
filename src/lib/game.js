@@ -10,7 +10,7 @@ class Game {
   }
 
   startGame() {
-    this.instuction();
+    this.instruction();
     let correct = 0;
 
     while (correct < 3) {
