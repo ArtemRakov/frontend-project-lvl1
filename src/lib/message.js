@@ -12,5 +12,4 @@ class Message {
     console.log(`Congratulations, ${name}!`);
   }
 }
-
 export default Message;
