@@ -1,3 +1,1 @@
-/* eslint no-eval: 0 */
-
-export default result => String(eval(result));
+export default result => String(result);
