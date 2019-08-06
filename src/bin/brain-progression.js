@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import Game from '../lib/game';
+import Game from '../index';
 import validation from '../games/brain-progression/validation';
 import question from '../games/brain-progression/question';
 import instruction from '../games/brain-progression/instruction';

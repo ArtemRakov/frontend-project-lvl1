@@ -1,8 +1,9 @@
 import _ from 'lodash';
+import randomize from '../../lib/randomize';
 
 export default () => {
-  const d = Math.ceil(Math.random() * 10);
-  const start = Math.floor(Math.random() * 10);
+  const d = randomize(1, 5);
+  const start = randomize(1, 30);
 
   const numberOfElements = 9;
   const elements = [start];

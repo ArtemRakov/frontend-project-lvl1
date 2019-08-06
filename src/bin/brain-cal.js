@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint no-eval: 0 */
 
-import Game from '../lib/game';
+import Game from '../index';
 import validation from '../games/brain-cal/validation';
 import question from '../games/brain-cal/question';
 import instruction from '../games/brain-cal/instruction';
