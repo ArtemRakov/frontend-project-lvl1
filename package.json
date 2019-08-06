@@ -1,7 +1,8 @@
 {
   "name": "frontend-project-lvl1-artemrakov",
   "version": "1.6.1",
-  "description": "",
+  "description": "Brain games",
+  "keywords": ["game", "brain"],
   "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
