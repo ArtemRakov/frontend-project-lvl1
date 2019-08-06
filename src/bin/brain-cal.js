@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-/* eslint no-eval: 0 */
 
 import Game from '../index';
 import validation from '../games/brain-cal/validation';
