@@ -3,7 +3,7 @@
 
 Не совсем уверен, как пофиксить https://codeclimate.com/github/ArtemRakov/frontend-project-lvl1/issues 
 
-Еще создал тот же проект без классов. https://github.com/ArtemRakov/frontend-project-lvl1/tree/game_without_classes
+Еще создал тот же проект без классов. Не знаю, как лучше. https://github.com/ArtemRakov/frontend-project-lvl1/tree/game_without_classes
 
 Brain Even
 [![asciicast](https://asciinema.org/a/cWqLhK8yli6xXuN8bluNwK0Lm.svg)](https://asciinema.org/a/cWqLhK8yli6xXuN8bluNwK0Lm)
