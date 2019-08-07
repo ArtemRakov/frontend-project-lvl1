@@ -1,7 +1,10 @@
 import _ from 'lodash';
-import randomize from '../../lib/randomize';
+import { randomize } from '../lib/utils';
+import run from '..';
 
-export default () => {
+const instruction = () => console.log('What number is missing in the progression?. \n');
+
+const question = () => {
   const d = randomize(1, 5);
   const start = randomize(1, 30);
 
@@ -21,3 +24,7 @@ export default () => {
 
   return number;
 };
+
+const validation = number => String(number);
+
+export default () => run(instruction, question, validation);

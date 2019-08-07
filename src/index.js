@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
-import { success, fail, final } from './lib/message';
-import getName from './lib/name';
+import {
+  success, fail, final, getName,
+} from './lib/utils';
 
 export default (instruction, question, validation) => {
   console.log('Welcome to the Brain Games!\n');

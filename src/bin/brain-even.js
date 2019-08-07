@@ -1,8 +1,5 @@
 #!/usr/bin/env node
 
-import run from '..';
-import validation from '../games/brain-even/validation';
-import question from '../games/brain-even/question';
-import instruction from '../games/brain-even/instruction';
+import even from '../games/even';
 
-run(instruction, question, validation);
+even();
