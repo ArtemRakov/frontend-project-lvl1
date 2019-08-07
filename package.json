@@ -3,7 +3,6 @@
   "version": "1.6.1",
   "description": "Brain games",
   "keywords": ["game", "brain"],
-  "main": "index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
