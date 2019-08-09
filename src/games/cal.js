@@ -1,4 +1,4 @@
-import { randomize } from '../lib/utils';
+import randomize from '../randomize';
 import run from '..';
 
 const operations = [

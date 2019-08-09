@@ -1,4 +1,4 @@
-import { randomize } from '../lib/utils';
+import randomize from '../randomize';
 import run from '..';
 
 const instruction = () => console.log("Answer 'yes' if given number is prime. Otherwise answer 'no'. \n");

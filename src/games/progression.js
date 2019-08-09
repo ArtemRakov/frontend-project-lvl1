@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { randomize } from '../lib/utils';
+import randomize from '../randomize';
 import run from '..';
 
 const instruction = () => console.log('What number is missing in the progression?. \n');

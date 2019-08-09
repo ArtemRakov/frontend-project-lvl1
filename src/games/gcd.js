@@ -1,4 +1,4 @@
-import { randomize } from '../lib/utils';
+import randomize from '../randomize';
 import run from '..';
 
 const instruction = () => console.log('Find the greatest common divisor of given numbers. \n');

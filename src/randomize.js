@@ -1,8 +1,4 @@
-import readlineSync from 'readline-sync';
-
 const randomize = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 
-export {
-  randomize,
-};
+export default randomize;
