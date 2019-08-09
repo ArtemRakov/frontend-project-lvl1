@@ -3,18 +3,10 @@ import run from '..';
 
 const instruction = () => 'Find the greatest common divisor of given numbers. \n';
 
-const findGcd = (number1, number2) => {
-  let first = number1;
-  let second = number2;
-  while (first !== 0 && second !== 0) {
-    if (first > second) {
-      first %= second;
-    } else {
-      second %= first;
-    }
-  }
-
-  return first + second;
+const findGcd = (a, b) => {
+  if (a < b) return findGcd(b, a);
+  if (b === 0) return a;
+  return findGcd(b, a % b);
 };
 
 const data = () => {
