@@ -1,14 +1,18 @@
 import randomize from '../randomize';
 import run from '..';
 
-const instruction = () => console.log("Answer 'yes' if number even otherwise answer 'no'. \n");
+const instruction = () => "Answer 'yes' if number even otherwise answer 'no'. \n"
 
-const question = () => {
-  const number = randomize(1, 100);
-  console.log(`Question: ${number}`);
-  return number;
+const isEven = number => number % 2 === 0;
+
+
+const data = () => {
+  const question = randomize(1, 100);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return { question, correctAnswer };
 };
 
-const validation = number => (number % 2 === 0 ? 'yes' : 'no');
+export default () => run(data, instruction);
 
-export default () => run(instruction, question, validation);
+
+// export default () => run(instruction, question, validation);
