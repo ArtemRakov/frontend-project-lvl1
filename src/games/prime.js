@@ -4,17 +4,11 @@ import run from '..';
 const instruction = () => console.log("Answer 'yes' if given number is prime. Otherwise answer 'no'. \n");
 
 const isPrime = (number) => {
-  if (number < 2) {
-    return false;
+  for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
+    if (number % i === 0) return false;
   }
 
-  for (let i = 2; i < number; i += 1) {
-    if (number % i === 0) {
-      return false;
-    }
-  }
-
-  return true;
+  return number > 1;
 };
 
 const question = () => {
