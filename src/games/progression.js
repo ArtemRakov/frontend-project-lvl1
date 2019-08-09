@@ -2,29 +2,37 @@ import _ from 'lodash';
 import randomize from '../randomize';
 import run from '..';
 
-const instruction = () => console.log('What number is missing in the progression?. \n');
+const instruction = () => 'What number is missing in the progression?. \n';
 
-const question = () => {
-  const d = randomize(1, 5);
+const LENGTH_OF_PROGRESSION = 10;
+
+const buildProgression = (size, d) => {
+  if (size < 1) return [];
+
   const start = randomize(1, 30);
 
-  const numberOfElements = 9;
-  const elements = [start];
+  const iter = (acc, length) => {
+    if (length < 1) {
+      return acc;
+    }
+    const last = acc[acc.length - 1] + d;
+    return iter([...acc, last], length - 1);
+  };
 
-  for (let i = 0; i < numberOfElements; i += 1) {
-    const last = elements[elements.length - 1];
-    elements.push(last + d);
-  }
-
-  const number = _.sample(elements);
-  const index = elements.indexOf(number);
-  elements[index] = '..';
-
-  console.log(`Question: ${elements.join(' ')}`);
-
-  return number;
+  return iter([start], size - 1);
 };
 
-const validation = number => String(number);
+const data = () => {
+  const d = randomize(1, 5);
+  const progression = buildProgression(LENGTH_OF_PROGRESSION, d);
 
-export default () => run(instruction, question, validation);
+  const number = _.sample(progression);
+  const index = progression.indexOf(number);
+  progression[index] = '..';
+  const question = progression.join(' ');
+  const correctAnswer = number.toString();
+
+  return { question, correctAnswer };
+};
+
+export default () => run(data, instruction);
