@@ -1,7 +1,25 @@
 import readlineSync from 'readline-sync';
-import {
-  success, fail, final, getName,
-} from './lib/utils';
+
+const CORRECT_TIMES = 3;
+
+const success = () => {
+  console.log('Correct!');
+};
+
+const fail = (answer, correctAnswer, name) => {
+  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+  console.log(`Let's try again, ${name}!`);
+};
+
+const final = (name) => {
+  console.log(`Congratulations, ${name}!`);
+};
+
+const getName = () => {
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
+  return name;
+};
 
 export default (instruction, question, validation) => {
   console.log('Welcome to the Brain Games!\n');
@@ -9,7 +27,7 @@ export default (instruction, question, validation) => {
   instruction();
   let correct = 0;
 
-  while (correct < 3) {
+  while (correct < CORRECT_TIMES) {
     const result = question();
     const userAnswer = readlineSync.question('Your answer: ');
     const correctAnswer = validation(result, userAnswer);
