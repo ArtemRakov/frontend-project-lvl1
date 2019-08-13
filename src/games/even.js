@@ -13,6 +13,3 @@ const data = () => {
 };
 
 export default () => run(data, instruction);
-
-
-// export default () => run(instruction, question, validation);
