@@ -2,7 +2,7 @@ import _ from 'lodash';
 import randomize from '../randomize';
 import run from '..';
 
-const instruction = () => 'What number is missing in the progression?. \n';
+const instruction = 'What number is missing in the progression?. \n';
 
 const LENGTH_OF_PROGRESSION = 10;
 

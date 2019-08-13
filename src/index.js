@@ -28,7 +28,7 @@ const getName = () => {
 export default (data, instruction) => {
   console.log('Welcome to the Brain Games!\n');
   const name = getName();
-  console.log(instruction());
+  console.log(instruction);
   let correct = 0;
 
   while (correct < CORRECT_TIMES) {

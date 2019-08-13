@@ -1,7 +1,7 @@
 import randomize from '../randomize';
 import run from '..';
 
-const instruction = () => "Answer 'yes' if number even otherwise answer 'no'. \n";
+const instruction = "Answer 'yes' if number even otherwise answer 'no'. \n"
 
 const isEven = number => number % 2 === 0;
 

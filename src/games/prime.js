@@ -1,7 +1,7 @@
 import randomize from '../randomize';
 import run from '..';
 
-const instruction = () => "Answer 'yes' if given number is prime. Otherwise answer 'no'. \n";
+const instruction = "Answer 'yes' if given number is prime. Otherwise answer 'no'. \n";
 
 const isPrime = (number) => {
   for (let i = 2, s = Math.sqrt(number); i <= s; i += 1) {
