@@ -7,7 +7,7 @@ const operations = [
   { sign: '*', solve: (a, b) => a * b },
 ];
 
-const instruction = 'What is the result of the expression? \n';
+const instruction = 'What is the result of the expression?';
 
 const data = () => {
   const number1 = randomize(1, 25);

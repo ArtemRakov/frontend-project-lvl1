@@ -20,7 +20,7 @@ const getName = () => {
 export default (data, instruction) => {
   console.log('Welcome to the Brain Games!\n');
   const name = getName();
-  console.log(instruction);
+  console.log(instruction, '\n');
 
   for (let i = 0; i < correctTimes; i += 1) {
     const { question, correctAnswer } = data();
