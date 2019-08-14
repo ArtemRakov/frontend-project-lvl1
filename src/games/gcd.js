@@ -4,9 +4,8 @@ import run from '..';
 const instruction = 'Find the greatest common divisor of given numbers. \n';
 
 const findGcd = (a, b) => {
-  if (a < b) return findGcd(b, a);
   if (b === 0) return a;
-  return findGcd(b, a % b);
+  return a < b ? findGcd(b, a) : findGcd(b, a % b);
 };
 
 const data = () => {
