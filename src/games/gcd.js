@@ -17,5 +17,4 @@ const data = () => {
   return { question, correctAnswer };
 };
 
-
 export default () => run(data, instruction);

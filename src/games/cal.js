@@ -9,7 +9,6 @@ const operations = [
 
 const instruction = 'What is the result of the expression? \n';
 
-
 const data = () => {
   const number1 = randomize(1, 25);
   const number2 = randomize(1, 25);
