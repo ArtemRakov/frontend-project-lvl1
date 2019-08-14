@@ -2,11 +2,6 @@ import readlineSync from 'readline-sync';
 
 const correctTimes = 3;
 
-const fail = (answer, correctAnswer, name) => {
-  console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-  console.log(`Let's try again, ${name}!`);
-};
-
 const final = (name) => {
   console.log(`Congratulations, ${name}!`);
 };
@@ -31,7 +26,8 @@ export default (data, instruction) => {
     if (correctAnswer === userAnswer) {
       console.log('Correct!');
     } else {
-      fail(userAnswer, correctAnswer, name);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
   }
