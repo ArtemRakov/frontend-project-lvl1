@@ -2,10 +2,6 @@ import readlineSync from 'readline-sync';
 
 const correctTimes = 3;
 
-const final = (name) => {
-  console.log(`Congratulations, ${name}!`);
-};
-
 const getName = () => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -32,5 +28,5 @@ export default (data, instruction) => {
     }
   }
 
-  final(name);
+  console.log(`Congratulations, ${name}!`);
 };
