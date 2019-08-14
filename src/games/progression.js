@@ -4,7 +4,7 @@ import run from '..';
 
 const instruction = 'What number is missing in the progression?. \n';
 
-const LENGTH_OF_PROGRESSION = 10;
+const lengthOfProgression = 10;
 
 const buildProgression = (size, d) => {
   if (size < 1) return [];
@@ -24,7 +24,7 @@ const buildProgression = (size, d) => {
 
 const data = () => {
   const d = randomize(1, 5);
-  const progression = buildProgression(LENGTH_OF_PROGRESSION, d);
+  const progression = buildProgression(lengthOfProgression, d);
 
   const number = _.sample(progression);
   const index = progression.indexOf(number);

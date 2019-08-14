@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const CORRECT_TIMES = 3;
+const correctTimes = 3;
 
 const fail = (answer, correctAnswer, name) => {
   console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
@@ -22,7 +22,7 @@ export default (data, instruction) => {
   const name = getName();
   console.log(instruction);
 
-  for (let i = 0; i < CORRECT_TIMES; i += 1) {
+  for (let i = 0; i < correctTimes; i += 1) {
     const { question, correctAnswer } = data();
     console.log(`Question: ${question}`);
 

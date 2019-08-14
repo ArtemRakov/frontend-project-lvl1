@@ -11,7 +11,6 @@ const isPrime = (number) => {
   return number > 1;
 };
 
-
 const data = () => {
   const question = randomize(1, 30);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
