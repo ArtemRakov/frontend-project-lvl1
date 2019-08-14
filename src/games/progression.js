@@ -6,10 +6,8 @@ const instruction = 'What number is missing in the progression?. \n';
 
 const lengthOfProgression = 10;
 
-const buildProgression = (size, d) => {
+const buildProgression = (start, size, d) => {
   if (size < 1) return [];
-
-  const start = randomize(1, 30);
 
   const iter = (acc, length) => {
     if (length < 1) {
@@ -24,11 +22,11 @@ const buildProgression = (size, d) => {
 
 const data = () => {
   const d = randomize(1, 5);
-  const progression = buildProgression(lengthOfProgression, d);
+  const progression = buildProgression(randomize(1, 30), lengthOfProgression, d);
 
   const number = _.sample(progression);
-  const index = progression.indexOf(number);
-  progression[index] = '..';
+  const hiddenElementIndex = progression.indexOf(number);
+  progression[hiddenElementIndex] = '..';
   const question = progression.join(' ');
   const correctAnswer = number.toString();
 
