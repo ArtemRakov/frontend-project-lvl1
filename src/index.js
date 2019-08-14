@@ -21,16 +21,14 @@ export default (data, instruction) => {
   console.log('Welcome to the Brain Games!\n');
   const name = getName();
   console.log(instruction);
-  let correct = 0;
 
-  while (correct < CORRECT_TIMES) {
+  for (let i = 0; i < CORRECT_TIMES; i += 1) {
     const { question, correctAnswer } = data();
     console.log(`Question: ${question}`);
 
     const userAnswer = readlineSync.question('Your answer: ');
 
     if (correctAnswer === userAnswer) {
-      correct += 1;
       console.log('Correct!');
     } else {
       fail(userAnswer, correctAnswer, name);
